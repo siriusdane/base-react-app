@@ -1,7 +1,7 @@
 {
-  "name": "trello-clone",
+  "name": "base-react-redux",
   "version": "1.0.0",
-  "description": "A simple clone of Trello",
+  "description": "A skeleton for a React Redux app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
