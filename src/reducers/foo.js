@@ -7,7 +7,7 @@ const initialState = {
 };
 
 function storeHandler(state = initialState, action) {
-    switch(action.type) {
+    switch (action.type) {
         case UPDATE_TEXT:
             return { ...state, text: action.text };
         default:

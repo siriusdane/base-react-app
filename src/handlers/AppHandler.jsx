@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import App from '../components/App.jsx';
 
 class AppHandler extends React.Component {
-    static propTypes = {
-        foo: PropTypes.object.isRequired
-    };
-
     render() {
         return (
             <App { ...this.props } />
         );
     }
 }
+
+AppHandler.propTypes = {
+    foo: PropTypes.object.isRequired
+};
 
 function mapStateToProps(state) {
     return {
