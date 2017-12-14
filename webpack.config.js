@@ -1,10 +1,12 @@
-const path = require('path');
+const path = require('path'),
+    extractTextPlugin = require('extract-text-webpack-plugin'),
+    publicPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
     entry: './src/app.jsx',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: publicPath
     },
     module: {
         loaders: [
@@ -17,12 +19,16 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
+    plugins: [
+        new extractTextPlugin('dist/bundle.css', { allChunks: true })
+    ],
     devServer: {
-        contentBase: path.resolve(__dirname, 'dist')
+        contentBase: publicPath,
+        historyApiFallback: true
     }
 };

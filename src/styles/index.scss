@@ -1,0 +1,9 @@
+@import './components/foo.scss';
+
+body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}

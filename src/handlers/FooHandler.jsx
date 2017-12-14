@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import App from '../components/App.jsx';
+import Foo from '../components/Foo.jsx';
 
-class AppHandler extends React.Component {
+class FooHandler extends React.Component {
     render() {
         return (
-            <App { ...this.props } />
+            <Foo { ...this.props } />
         );
     }
 }
 
-AppHandler.propTypes = {
+FooHandler.propTypes = {
     foo: PropTypes.object.isRequired
 };
 
@@ -21,4 +21,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(AppHandler);
+export default connect(mapStateToProps)(FooHandler);

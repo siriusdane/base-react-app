@@ -1,0 +1,29 @@
+.foo-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 100vh 50px;
+
+    .foo-header {
+        display: flex;
+        align-items: center;
+        grid-column: span 12;
+        background-color: #a7e4ae;
+    }
+
+    .foo-menu {
+        grid-column: span 2;
+        background-color: #fdd6b5;
+    }
+
+    .foo-body {
+        grid-column: span 10;
+        background-color: #fdf3b8;
+    }
+
+    .foo-footer {
+        display: flex;
+        align-items: center;
+        grid-column: span 12;
+        background-color: #c1d1fd;
+    }
+}
